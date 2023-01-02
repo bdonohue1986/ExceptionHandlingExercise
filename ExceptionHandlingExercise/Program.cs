@@ -23,35 +23,31 @@ namespace ExceptionHandlingExercise
             var arr = new char[] { '1', '2', '3', '4', '5', '6', 'a', 'b', 'c' };
             var numbers = new List<int>();
             string str = null;
-            /*foreach(var c in arr)
+            foreach(var c in arr)
             {
                 int.Parse(arr);
                 
             }
-            */
+            
             //TODO START HERE:
             // Make a foreach loop to iterate through your character array
-            foreach(var  i in numbers)
-            {
-                Console.WriteLine(i);
-            }
             
             foreach(var i in arr)
             {
                 try
                 {
                     str = i.ToString();
-                    int.Parse(str);
-                    numbers.Add(i);
+                    
+                    numbers.Add(int.Parse(str));
 
                 }
                 catch(Exception)
                 {
                     Console.WriteLine($"Unable to Parse '{i}'");
                 }
-                foreach(var num in numbers) { Console.WriteLine(num); }
+                
             }
-          
+          foreach(var num in numbers) { Console.WriteLine(num); }
           
             // Now create a try catch
 
